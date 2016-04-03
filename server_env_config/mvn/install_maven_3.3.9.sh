@@ -10,7 +10,7 @@ DOWNLOAD_DIR="./downloads"
 MAVEN_FILE="$DOWNLOAD_DIR/apache-maven-3.3.9-bin.tar.gz"
 MAVEN_DURL="http://mirrors.hust.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"
 MAVEN_INSTALL_DIR="/usr/local/maven"
-MAVEN_ROOT_FOLDER="maven-3.3.9"
+MAVEN_ROOT_FOLDER="apache-maven-3.3.9"
 MAVEN_STD_FOLDER="/usr/maven"
 PROFILE="/etc/profile"
 
