@@ -61,5 +61,7 @@ else
 make 32bit
 fi
 
-cd "$REDIA_INSTALL_DIR/$REDIA_ROOT_FOLDER/src"
-./redis-server
+ifubuntu=$(cat /proc/version | grep ubuntu)
+if [ "$ifubuntu" != "" ] && [ "$if14" != "" ];then
+  cd src && make all
+fi
