@@ -53,6 +53,9 @@ fi
 
 ln -s "$REDIA_INSTALL_DIR/$REDIA_ROOT_FOLDER" "$REDIA_STD_FOLDER/3.0.7"
 
+mv "$REDIA_INSTALL_DIR/$REDIA_ROOT_FOLDER/redis.conf" "$REDIA_INSTALL_DIR/$REDIA_ROOT_FOLDER/redis_bak.conf"
+cp "./redis.conf" "$REDIA_INSTALL_DIR/$REDIA_ROOT_FOLDER/"
+
 cd "$REDIA_INSTALL_DIR/$REDIA_ROOT_FOLDER"
 
 if [ `uname -m` == "x86_64" ];then
@@ -63,5 +66,5 @@ fi
 
 ifubuntu=$(cat /proc/version | grep ubuntu)
 if [ "$ifubuntu" != "" ] && [ "$if14" != "" ];then
-  cd src && make all
+  echo $PATH
 fi
