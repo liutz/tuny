@@ -100,6 +100,7 @@ echo "max_binlog_size = 1000M" >> /etc/my.cnf
 sed -i 's#skip-external-locking#skip-external-locking\nlog-error=/usr/db/mysql-5.6.21-linux-glibc2.5/log/error.log#' /etc/my.cnf
 chmod 755 /etc/init.d/mysqld
 /etc/init.d/mysqld start
+sudo update-rc.d -f mysqld defaults
 
 echo "PATH=$DB_STD_FOLDER/$DB_ROOT_FOLDER/bin:$PATH" >> "$PROFILE"
 source "$PROFILE"
